@@ -5,14 +5,26 @@ from tensorflow.keras.models import load_model
 import matplotlib.pyplot as plt
 import altair as alt
 import json
+from PIL import Image
 
 
+# ---- Page Setup ----
 st.set_page_config(
     page_title="Dashboard Gambaran Kecelakaan",
-    layout="wide",  # or "centered"
+    layout="wide",
     initial_sidebar_state="expanded"
 )
+
+# ---- Sidebar Logo ----
+st.sidebar.image("logo.jpeg", use_column_width=True)  # 👈 logo above menu
 menu_utama = st.sidebar.radio("Menu", ["Dashboard Analisa", "Forecasting"])
+
+
+# ---- Main Title ----
+st.markdown("<h1 style='text-align: center;'>📊 Dashboard Analisa</h1>", unsafe_allow_html=True)
+
+
+
 dfw=pd.read_csv('Data_Laka_Weekly.csv')
 dfw["Kecamatan"] = dfw["Kecamatan"].str.strip().str.title()  
 # Convert 'week' to sortable datetime (ISO format uses 'W' for week)
