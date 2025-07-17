@@ -161,8 +161,8 @@ def forecasting():
     
     
     #load model
-    model_0=load_model('model_cluster0.keras')
-    model_1=load_model('model_cluster1.keras')
+    model_0=load_model('model_cluster0_tf15.keras')
+    model_1=load_model('model_cluster1_tf15.keras')
     
     st.sidebar.header('Filter Data')
     #lokasi kecamatan
