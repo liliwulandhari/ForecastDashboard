@@ -6,8 +6,7 @@ joblib==1.2.0
 keras
 tensorflow
 matplotlib 
-pydantic
-requests
+altair
+json
 seaborn 
-statistics 
-string  
+
