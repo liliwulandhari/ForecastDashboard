@@ -307,7 +307,6 @@ def forecasting():
 # Sidebar menu
 
 if menu_utama == "Dashboard Analisa":
-    st.title("📊 Dashboard Analisa")
     menu = st.sidebar.selectbox("Analisa", ["Analisa Umum", "Analisa Kecamatan"])
     if menu == "Analisa Umum":
         general_analysis(dfw)
